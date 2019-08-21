@@ -2,9 +2,10 @@ import re
 import os
 import json
 from django.shortcuts import render
+
 #importing loading from django template
 from django.template import loader
-# Create your views here.
+
 from django.http import HttpResponse
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.views import APIView
