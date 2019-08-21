@@ -16,8 +16,10 @@
                     $.ajax({
                         url : "https://autocompleteapi.herokuapp.com/search/?word=" + $(this).val(),
                         dataType: "json",
-                        success : function (data) {
-                        $("#result").append(data);
+                        success : function (response) {
+                            $(response.toString().split(",")).each(function () {
+                                $("#result").append(this + "</br>");
+                            });
                         }
                     });
                 });
