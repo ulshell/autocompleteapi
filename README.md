@@ -1,4 +1,4 @@
-# FUFullThrottle Labs Assignment
+# FullThrottle Labs Assignment
 
 ## Task completed
 
