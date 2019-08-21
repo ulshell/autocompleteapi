@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 
 CORS_ORIGIN_REGEX_WHITELIST = [
-    r"^https://127.0.0.1:5000/search*$",
+    r"^https://autocompleteapi.herokuapp.com/search*$",
 ]
 ROOT_URLCONF = 'fuzzySearch.urls'
 

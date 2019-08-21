@@ -14,7 +14,7 @@
                 $("#myInput").on("input", function(){
                     $("p").empty();
                     $.ajax({
-                        url : "http://127.0.0.1:8000/search/?word=" + $(this).val(),
+                        url : "https://autocompleteapi.herokuapp.com/search/?word=" + $(this).val(),
                         dataType: "json",
                         success : function (data) {
                         $("#result").append(data);
