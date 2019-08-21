@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>AutoCompleteApi</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                $("#myInput").on("input", function(){
+                    $("p").empty();
+                    $.ajax({
+                        url : "http://127.0.0.1:8000/search/?word=" + $(this).val(),
+                        dataType: "json",
+                        success : function (data) {
+                        $("#result").append(data);
+                        }
+                    });
+                });
+            });
+    </script>
+</head>
+
+<body>
+    <h1> Type a word below to get matches </h1>
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="Type something..." id="myInput">
+    </div>
+    <p id="result" style="padding-left: 50px;"></p>
+</body>
+
+</html>
